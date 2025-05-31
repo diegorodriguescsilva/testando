@@ -1,0 +1,16 @@
+name: Hello Diego
+on:
+  #schedule:
+  #  - cron: '30 5 * * 1,3'
+  push:
+    branches:
+      - main
+      - users/eduardo/**
+      - users/thiago
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Exibir mensagem
+        run:  echo "Olá, teste do Diego"
